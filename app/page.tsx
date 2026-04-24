@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Sidebar from "@/components/Sidebar";
 import AddBookModal from "@/components/AddBookModal";
+import TasteInterviewModal from "@/components/TasteInterviewModal";
 import StarRating from "@/components/StarRating";
 import { getAllBooks } from "@/lib/books";
 import { BookEntry } from "@/lib/types";
@@ -28,6 +29,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [hydrated, setHydrated] = useState(false);
+  const [interviewBook, setInterviewBook] = useState<BookEntry | null>(null);
 
   // Load from localStorage only on the client to avoid SSR mismatch
   useEffect(() => {
