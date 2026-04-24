@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-lora {
+    font-family: 'Lora', serif;
+  }
+
+  .book-spine   { background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%); }
+  .book-spine-2 { background: linear-gradient(135deg, #059669 0%, #0d9488 100%); }
+  .book-spine-3 { background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%); }
+  .book-spine-4 { background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%); }
+  .book-spine-5 { background: linear-gradient(135deg, #be185d 0%, #9333ea 100%); }
+  .book-spine-6 { background: linear-gradient(135deg, #b45309 0%, #d97706 100%); }
+
+  .modal-overlay {
+    background: rgba(15, 10, 30, 0.65);
+    backdrop-filter: blur(4px);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #f1f5f9; }
+  ::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 10px; }
+}
