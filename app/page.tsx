@@ -57,7 +57,7 @@ export default function Home() {
 
   return (
     <div className="flex h-screen overflow-hidden">
-      <Sidebar />
+      <Sidebar activePage="dashboard" />
 
       {/* Main content */}
       <main className="flex-1 overflow-y-auto">
@@ -217,9 +217,7 @@ export default function Home() {
                 <h2 className="font-semibold text-slate-700">
                   Recently Finished
                 </h2>
-                <span className="text-sm text-violet-500">
-                  {books.length} total in library
-                </span>
+                <a href="/shelf" className="text-sm text-violet-500 hover:text-violet-700 transition">View all library →</a>
               </div>
               <div className="grid grid-cols-3 gap-4">
                 {recentBooks.map((book) => (
