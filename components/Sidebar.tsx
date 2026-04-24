@@ -69,7 +69,7 @@ export default function Sidebar({ activePage = "dashboard" }: Props) {
           Search Books
         </a>
         <a
-          href="#"
+          href="/recommendations"
           className={activePage === "recommendations" ? activeClass : inactiveClass}
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
